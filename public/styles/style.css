@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #34D399;
+    --secondary-color: #A5F3FC;
+    --secondary-color2: #E5E7EB;
+    --bg-color: #F9FAFB;
+    --text-color: #1F2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100dvh;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #fff;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 7rem;
+    color: var(--text-color);
+    text-align: center;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title .highlight {
+    color: var(--primary-color);
+}
+
+.title span:not(.highlight):nth-child(1) {
+    display: flex;
+    transform: translateX(-150%);
+    animation: moveRight 1s ease-in-out forwards;
+}
+
+.title span:not(.highlight):nth-child(2) {
+    display: flex;
+    transform: translateX(500%);
+    animation: moveLeft 1s ease-in-out forwards;
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+} 
+

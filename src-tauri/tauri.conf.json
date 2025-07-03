@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schema.tauri.app/config/2",
+    "productName": "MiniTalk",
+    "version": "0.0.1",
+    "identifier": "com.minitalk.desktop",
+    "build": {
+        "frontendDist": "../dist",
+        "devUrl": "http://localhost:5173",
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build"
+    },
+    "app": {
+        "windows": [
+            {
+                "title": "MiniTalk",
+                "width": 800,
+                "height": 700,
+                "resizable": true,
+                "fullscreen": false,
+                "decorations": true,
+                "minWidth": 400,
+                "minHeight": 700,
+                "maxWidth": 800,
+                "maxHeight": 700,
+                "alwaysOnTop": false
+            }
+        ],
+        "security": {
+            "csp": null
+        }
+    },
+    "bundle": {
+        "active": true,
+        "targets": "all",
+        "icon": [
+            "icons/icon.icns",
+            "icons/icon.ico",
+            "icons/icon.png"
+        ]
+    }
+}
+
+
