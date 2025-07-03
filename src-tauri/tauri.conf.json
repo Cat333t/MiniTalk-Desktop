@@ -37,6 +37,19 @@
             "icons/icon.ico",
             "icons/icon.png"
         ]
+    },
+    "plugins": {
+        "updater": {
+            "active": true,
+            "dialog": true,
+            "endpoints": [
+                "https://api.github.com/Cat333t/MiniTalk-Desktop/releases/latest/"
+            ],
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDIyRDA4OEY5MDEwMDQxNEUKUldST1FRQUIrWWpRSXY3dGs2bHZWc0N0bkVkZXJVcG52dVN4M2ZKZDlSNXN4MFdxZlluL3A3b0EK",
+            "windows": {
+                "installMode": "passive"
+            }
+        }
     }
 }
 
